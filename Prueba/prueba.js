@@ -1,10 +1,25 @@
-let num = 1 ;
-const array = [];
-for(i=0; i<10; i++) {
-    num += 2;
-    if(i == 5){
-        continue;
-    }
-   array.push(num);
+objetoProducto = {
+    precio: 10,
+    porcentajeDeDescuento: 0.2
 }
-console.log(array);
+
+
+// objetoProducto.calcularPrecioDescuento = function() {
+//     this.precio -= this.precio * this.porcentajeDeDescuento;
+//  }
+// objetoProducto.calcularPrecioDescuento()
+// console.log(objetoProducto.precio);
+
+// objetoProducto.calcularPrecioDescuento = function() {
+//     return this.precio * this.porcentajeDeDescuento;
+    
+//  }
+// var precioTotal = objetoProducto.precio - objetoProducto.calcularPrecioDescuento() 
+// console.log(precioTotal);
+
+
+objetoProducto.calcularPrecioDescuento = function() {
+    return this.precio - (this.precio * this.porcentajeDeDescuento);
+    
+}
+console.log(objetoProducto.calcularPrecioDescuento());
